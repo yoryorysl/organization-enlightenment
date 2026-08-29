@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | The Organization</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #090909;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #080808;
+      border-bottom: 1px solid #292929;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #d8b45a;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d8b45a;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: radial-gradient(circle, #242016, #090909 65%);
+    }
+
+    .symbol {
+      font-size: 52px;
+      color: #d8b45a;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 65px);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #d8b45a;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #bbb;
+      font-size: 17px;
+    }
+
+    section {
+      padding: 75px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #999;
+    }
+
+    .content {
+      background: #141414;
+      border: 1px solid #292929;
+      border-radius: 10px;
+      padding: 35px;
+      margin-bottom: 25px;
+    }
+
+    .content h3 {
+      color: #d8b45a;
+      margin-bottom: 12px;
+      font-size: 23px;
+    }
+
+    .content p {
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .card-icon {
+      font-size: 30px;
+      color: #d8b45a;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 15px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #101010;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 26px;
+      background: #d8b45a;
+      color: #111;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #f0d27c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #777;
+      border-top: 1px solid #292929;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 750px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      .content {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">THE ORGANIZATION</div>
+
+    <div>
+      <a href="index.html">Home</a>
+      <a href="enlightenment.html">Enlightenment</a>
+      <a href="join.html">Join</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="symbol">△</div>
+
+  <h1>About <span>Our Organization</span></h1>
+
+  <p>
+    Discover our purpose, philosophy, principles, and approach to education,
+    personal development, and community.
+  </p>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Who We Are</h2>
+      <p>Understanding the organization begins with understanding its purpose.</p>
+    </div>
+
+    <div class="content">
+      <h3>Our Purpose</h3>
+
+      <p>
+        Our organization provides a community for people interested in
+        knowledge, philosophical exploration, personal development, and
+        learning.
+      </p>
+
+      <p>
+        We encourage members and prospective members to ask questions,
+        examine information carefully, and make their own informed decisions.
+      </p>
+    </div>
+
+    <div class="content">
+      <h3>Our Approach</h3>
+
+      <p>
+        We believe that learning is a continuous process. Individuals should
+        have the opportunity to explore ideas at their own pace while
+        maintaining their personal independence and responsibilities.
+      </p>
+
+      <p>
+        Membership is not a requirement for learning. Visitors are welcome
+        to explore the available information before deciding whether they
+        want to participate.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:#101010;">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Core Principles</h2>
+      <p>The standards that guide our community.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">◈</div>
+        <h3>Knowledge</h3>
+        <p>
+          We encourage education, curiosity, research, and thoughtful
+          examination of ideas.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">◇</div>
+        <h3>Respect</h3>
+        <p>
+          Every participant should be treated with dignity and respect.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">△</div>
+        <h3>Personal Freedom</h3>
+        <p>
+          Individuals should be free to make their own decisions about
+          participation.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">◎</div>
+        <h3>Responsibility</h3>
+        <p>
+          Members are expected to act responsibly and respect applicable
+          laws and community standards.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">◌</div>
+        <h3>Transparency</h3>
+        <p>
+          Important expectations and requirements should be communicated
+          clearly before participation.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">∞</div>
+        <h3>Growth</h3>
+        <p>
+          Personal development is viewed as an ongoing journey of learning
+          and reflection.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Explore the Organization</h2>
+
+      <p>
+        Learn more about our educational path or review the membership
+        process.
+      </p>
+
+      <a href="enlightenment.html" class="btn">
+        Explore Enlightenment
+      </a>
+
+      <a href="join.html"
+         class="btn"
+         style="margin-left:10px;">
+        How to Join
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 The Organization. All rights reserved.</p>
+
+  <p style="margin-top:10px;">
+    <a href="index.html">Home</a>
+    <a href="enlightenment.html">Enlightenment</a>
+    <a href="join.html">Join</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </p>
+</footer>
+
+</body>
+</html>
