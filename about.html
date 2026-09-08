@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | The Organization</title>
+
+  <meta name="description" content="Learn about the Illuminati, its historical origins, modern narratives, philosophy and principles of global unity and enlightenment.">
+
+  <title>About | Illuminati — Global Unity & Enlightenment</title>
 
   <style>
     * {
@@ -12,41 +15,57 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #090909;
+      background: #080808;
       color: #f5f5f5;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     header {
-      background: #080808;
-      border-bottom: 1px solid #292929;
-      padding: 18px 20px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.97);
+      border-bottom: 1px solid #292929;
+      backdrop-filter: blur(10px);
     }
 
     nav {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
+      padding: 16px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .logo {
       color: #d8b45a;
       font-weight: bold;
       letter-spacing: 2px;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     nav a {
-      color: #ddd;
+      color: #ccc;
       text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
+      font-size: 13px;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -54,76 +73,88 @@
     }
 
     .hero {
+      padding: 110px 20px 90px;
       text-align: center;
-      padding: 90px 20px;
-      background: radial-gradient(circle, #242016, #090909 65%);
+      background:
+        radial-gradient(circle at center, #292210 0%, #111 42%, #050505 75%);
     }
 
     .symbol {
-      font-size: 52px;
-      color: #d8b45a;
-      margin-bottom: 15px;
+      font-size: 48px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(40px, 7vw, 65px);
-      margin-bottom: 18px;
+      font-size: clamp(42px, 7vw, 70px);
+      line-height: 1.1;
+      margin-bottom: 20px;
     }
 
-    .hero h1 span {
+    .gold {
       color: #d8b45a;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 780px;
       margin: auto;
-      color: #bbb;
+      color: #bcbcbc;
       font-size: 17px;
     }
 
     section {
-      padding: 75px 20px;
+      padding: 80px 20px;
+    }
+
+    .dark {
+      background: #101010;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
     }
 
-    .section-title {
+    .heading {
       text-align: center;
       margin-bottom: 45px;
     }
 
-    .section-title h2 {
-      font-size: 35px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #999;
-    }
-
-    .content {
-      background: #141414;
-      border: 1px solid #292929;
-      border-radius: 10px;
-      padding: 35px;
-      margin-bottom: 25px;
-    }
-
-    .content h3 {
-      color: #d8b45a;
+    .heading h2 {
+      font-size: 36px;
+      line-height: 1.2;
       margin-bottom: 12px;
-      font-size: 23px;
     }
 
-    .content p {
-      color: #aaa;
+    .heading p {
+      color: #999;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .content-box {
+      background: #151515;
+      border: 1px solid #2c2c2c;
+      border-radius: 12px;
+      padding: 32px;
+      margin-bottom: 22px;
+    }
+
+    .content-box h3 {
+      color: #d8b45a;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .content-box p {
+      color: #b5b5b5;
       margin-bottom: 15px;
     }
 
-    .cards {
+    .content-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
@@ -132,14 +163,14 @@
     .card {
       background: #151515;
       border: 1px solid #292929;
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 28px;
     }
 
-    .card-icon {
-      font-size: 30px;
+    .icon {
       color: #d8b45a;
-      margin-bottom: 15px;
+      font-size: 30px;
+      margin-bottom: 12px;
     }
 
     .card h3 {
@@ -151,52 +182,142 @@
       font-size: 15px;
     }
 
+    .timeline {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 25px;
+      padding: 25px 0;
+      border-bottom: 1px solid #292929;
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .year {
+      color: #d8b45a;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: #aaa;
+    }
+
+    .quote {
+      max-width: 850px;
+      margin: 30px auto 0;
+      padding: 25px;
+      border-left: 3px solid #d8b45a;
+      background: #19160e;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    .notice {
+      padding: 24px;
+      border-radius: 10px;
+      border: 1px solid #5b4d2d;
+      background: #19160e;
+      color: #aaa;
+      margin-top: 25px;
+    }
+
+    .notice strong {
+      color: #d8b45a;
+    }
+
     .cta {
       text-align: center;
-      background: #101010;
+      background:
+        linear-gradient(135deg, #1d180d, #090909);
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: auto;
+      color: #aaa;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 14px 26px;
+      margin-top: 25px;
+      padding: 14px 25px;
+      border-radius: 6px;
       background: #d8b45a;
       color: #111;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     .btn:hover {
       background: #f0d27c;
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
-      padding: 30px 20px;
-      color: #777;
+      padding: 35px 20px;
+      background: #050505;
       border-top: 1px solid #292929;
+      color: #777;
       font-size: 13px;
     }
 
     footer a {
       color: #aaa;
       text-decoration: none;
-      margin: 0 8px;
+      margin: 0 7px;
     }
 
-    @media (max-width: 750px) {
-      .cards {
+    footer a:hover {
+      color: #d8b45a;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav ul {
+        justify-content: center;
+        gap: 10px 14px;
+      }
+
+      .grid {
         grid-template-columns: 1fr;
       }
 
-      nav a {
-        margin-left: 8px;
-        font-size: 12px;
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
       }
 
-      .content {
-        padding: 25px;
+      section {
+        padding: 65px 18px;
+      }
+
+      .content-box {
+        padding: 24px;
+      }
+
+      .heading h2 {
+        font-size: 31px;
       }
     }
   </style>
@@ -204,176 +325,438 @@
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">THE ORGANIZATION</div>
+  <header>
+    <nav>
+      <div class="logo">
+        ILLUMINATI • GLOBAL UNITY
+      </div>
 
-    <div>
-      <a href="index.html">Home</a>
-      <a href="enlightenment.html">Enlightenment</a>
-      <a href="join.html">Join</a>
-      <a href="faq.html">FAQ</a>
-    </div>
-  </nav>
-</header>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enlightenment.html">Enlightenment</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="hero">
-  <div class="symbol">△</div>
 
-  <h1>About <span>Our Organization</span></h1>
+  <section class="hero">
 
-  <p>
-    Discover our purpose, philosophy, principles, and approach to education,
-    personal development, and community.
-  </p>
-</section>
-
-<section>
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Who We Are</h2>
-      <p>Understanding the organization begins with understanding its purpose.</p>
+    <div class="symbol">
+      👁️
     </div>
 
-    <div class="content">
-      <h3>Our Purpose</h3>
+    <h1>
+      About the <span class="gold">Illuminati</span>
+    </h1>
+
+    <p>
+      Explore the history, ideas, principles and modern narratives
+      associated with the Illuminati and the concept of global unity.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          Understanding the <span class="gold">Organization</span>
+        </h2>
+
+        <p>
+          Knowledge and critical thinking should come before any decision
+          to participate.
+        </p>
+
+      </div>
+
+
+      <div class="content-box">
+
+        <h3>
+          What Is the Illuminati?
+        </h3>
+
+        <p>
+          The term "Illuminati" has been used to describe different
+          groups and ideas throughout history. The most historically
+          documented organization associated with the name was the
+          Bavarian Illuminati, founded in 1776 by Johann Adam Weishaupt
+          in Ingolstadt, Bavaria.
+        </p>
+
+        <p>
+          Modern discussions frequently use the name to describe
+          theories or narratives about a continuing secret or global
+          organization. Such modern claims are different from the
+          documented history of the eighteenth-century Bavarian group.
+        </p>
+
+        <p>
+          This website presents information about these ideas while
+          encouraging visitors to distinguish historical evidence from
+          modern claims and speculation.
+        </p>
+
+      </div>
+
+
+      <div class="content-box">
+
+        <h3>
+          Global Unity
+        </h3>
+
+        <p>
+          Global unity refers to the idea that people from different
+          cultures, countries and backgrounds can cooperate around
+          shared principles such as peace, education, personal
+          development and service to others.
+        </p>
+
+        <p>
+          The philosophy presented on this website places emphasis on
+          learning, responsible conduct, mutual respect and constructive
+          participation in society.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="dark">
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          Historical <span class="gold">Origins</span>
+        </h2>
+
+        <p>
+          A brief overview of the historically documented Bavarian
+          Illuminati.
+        </p>
+
+      </div>
+
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <div class="year">
+            1748
+          </div>
+
+          <div>
+            <h3>
+              Birth of Johann Adam Weishaupt
+            </h3>
+
+            <p>
+              Johann Adam Weishaupt was born in Ingolstadt, Bavaria.
+              He later became a professor of canon law.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="year">
+            1776
+          </div>
+
+          <div>
+            <h3>
+              Foundation
+            </h3>
+
+            <p>
+              Weishaupt founded the historical Illuminati in Ingolstadt
+              on May 1, 1776. The organization was associated with
+              Enlightenment-era ideas concerning reason, education
+              and social reform.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="year">
+            1780s
+          </div>
+
+          <div>
+            <h3>
+              Suppression
+            </h3>
+
+            <p>
+              Bavarian authorities prohibited the organization and it
+              declined during the 1780s.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="notice">
+
+        <strong>
+          Historical distinction:
+        </strong>
+
+        The documented Bavarian Illuminati of the eighteenth century
+        should not automatically be treated as proof of modern claims
+        about a continuing worldwide organization.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          Core <span class="gold">Principles</span>
+        </h2>
+
+        <p>
+          Principles presented throughout this website.
+        </p>
+
+      </div>
+
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="icon">
+            △
+          </div>
+
+          <h3>
+            Unity
+          </h3>
+
+          <p>
+            Encouraging cooperation between people across geographical,
+            cultural and social boundaries.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">
+            ◈
+          </div>
+
+          <h3>
+            Knowledge
+          </h3>
+
+          <p>
+            Encouraging learning, questioning, research and thoughtful
+            examination of information.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">
+            ◎
+          </div>
+
+          <h3>
+            Peace
+          </h3>
+
+          <p>
+            Promoting peaceful relationships and responsible
+            cooperation.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">
+            ♡
+          </div>
+
+          <h3>
+            Compassion
+          </h3>
+
+          <p>
+            Recognizing the importance of helping vulnerable people
+            and contributing positively to communities.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">
+            ✦
+          </div>
+
+          <h3>
+            Personal Development
+          </h3>
+
+          <p>
+            Encouraging discipline, reflection, education and
+            continuous improvement.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">
+            ∞
+          </div>
+
+          <h3>
+            Service
+          </h3>
+
+          <p>
+            Supporting constructive actions that can benefit
+            individuals and communities.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="dark">
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          Responsible <span class="gold">Participation</span>
+        </h2>
+
+        <p>
+          Any decision to participate should be voluntary and informed.
+        </p>
+
+      </div>
+
+
+      <div class="content-box">
+
+        <h3>
+          Make an Informed Decision
+        </h3>
+
+        <p>
+          Visitors should take time to understand the information
+          presented, ask questions and consider their own expectations
+          before expressing interest.
+        </p>
+
+        <p>
+          No person should be pressured into participation or required
+          to harm themselves, another person or an animal.
+        </p>
+
+        <p>
+          Respect for personal boundaries, lawful conduct and the
+          wellbeing of others should remain fundamental.
+        </p>
+
+      </div>
+
+
+      <div class="quote">
+        "Knowledge should come before commitment, and understanding
+        should come before decision."
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Continue Your <span class="gold">Journey</span>
+      </h2>
 
       <p>
-        Our organization provides a community for people interested in
-        knowledge, philosophical exploration, personal development, and
-        learning.
-      </p>
-
-      <p>
-        We encourage members and prospective members to ask questions,
-        examine information carefully, and make their own informed decisions.
-      </p>
-    </div>
-
-    <div class="content">
-      <h3>Our Approach</h3>
-
-      <p>
-        We believe that learning is a continuous process. Individuals should
-        have the opportunity to explore ideas at their own pace while
-        maintaining their personal independence and responsibilities.
-      </p>
-
-      <p>
-        Membership is not a requirement for learning. Visitors are welcome
-        to explore the available information before deciding whether they
-        want to participate.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section style="background:#101010;">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Our Core Principles</h2>
-      <p>The standards that guide our community.</p>
-    </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <div class="card-icon">◈</div>
-        <h3>Knowledge</h3>
-        <p>
-          We encourage education, curiosity, research, and thoughtful
-          examination of ideas.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">◇</div>
-        <h3>Respect</h3>
-        <p>
-          Every participant should be treated with dignity and respect.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">△</div>
-        <h3>Personal Freedom</h3>
-        <p>
-          Individuals should be free to make their own decisions about
-          participation.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">◎</div>
-        <h3>Responsibility</h3>
-        <p>
-          Members are expected to act responsibly and respect applicable
-          laws and community standards.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">◌</div>
-        <h3>Transparency</h3>
-        <p>
-          Important expectations and requirements should be communicated
-          clearly before participation.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">∞</div>
-        <h3>Growth</h3>
-        <p>
-          Personal development is viewed as an ongoing journey of learning
-          and reflection.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Explore the Organization</h2>
-
-      <p>
-        Learn more about our educational path or review the membership
-        process.
+        Explore the enlightenment material or review the membership
+        process when you are ready.
       </p>
 
       <a href="enlightenment.html" class="btn">
-        Explore Enlightenment
+        Explore Enlightenment →
       </a>
 
-      <a href="join.html"
-         class="btn"
-         style="margin-left:10px;">
-        How to Join
-      </a>
     </div>
 
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2026 The Organization. All rights reserved.</p>
 
-  <p style="margin-top:10px;">
-    <a href="index.html">Home</a>
-    <a href="enlightenment.html">Enlightenment</a>
-    <a href="join.html">Join</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-  </p>
-</footer>
+  <footer>
+
+    <p>
+      © 2026 Illuminati • Global Unity & Enlightenment
+    </p>
+
+    <p style="margin-top:12px;">
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="enlightenment.html">Enlightenment</a>
+      <a href="join.html">Join</a>
+
+    </p>
+
+  </footer>
 
 </body>
 </html>
