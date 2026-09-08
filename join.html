@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join | The Organization</title>
+
+  <meta name="description" content="Explore the membership process and express your interest in the Illuminati Global Unity and Enlightenment community.">
+
+  <title>Join | Illuminati — Global Unity & Enlightenment</title>
 
   <style>
     * {
@@ -12,41 +15,58 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #090909;
+      background: #080808;
       color: #f5f5f5;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     header {
-      background: #080808;
-      border-bottom: 1px solid #292929;
-      padding: 18px 20px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.97);
+      border-bottom: 1px solid #292929;
+      backdrop-filter: blur(10px);
     }
 
     nav {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
+      padding: 16px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .logo {
       color: #d8b45a;
       font-weight: bold;
       letter-spacing: 2px;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     nav a {
-      color: #ddd;
+      color: #ccc;
       text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
+      font-size: 13px;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -54,187 +74,364 @@
     }
 
     .hero {
+      padding: 105px 20px 90px;
       text-align: center;
-      padding: 85px 20px;
-      background: radial-gradient(circle, #242016, #090909 65%);
+      background:
+        radial-gradient(circle at center, #292210 0%, #111 42%, #050505 75%);
     }
 
     .symbol {
-      font-size: 52px;
-      color: #d8b45a;
-      margin-bottom: 15px;
+      font-size: 48px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: clamp(40px, 7vw, 65px);
-      margin-bottom: 18px;
+      font-size: clamp(42px, 7vw, 70px);
+      line-height: 1.1;
+      margin-bottom: 20px;
     }
 
-    .hero h1 span {
+    .gold {
       color: #d8b45a;
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 780px;
       margin: auto;
-      color: #bbb;
+      color: #bcbcbc;
       font-size: 17px;
     }
 
     section {
-      padding: 75px 20px;
+      padding: 80px 20px;
+    }
+
+    .dark {
+      background: #101010;
     }
 
     .container {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: auto;
     }
 
-    .section-title {
+    .heading {
       text-align: center;
       margin-bottom: 45px;
     }
 
-    .section-title h2 {
-      font-size: 35px;
-      margin-bottom: 10px;
+    .heading h2 {
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 12px;
     }
 
-    .section-title p {
+    .heading p {
       color: #999;
+      max-width: 750px;
+      margin: auto;
     }
 
-    .requirements {
+    .process {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      margin-bottom: 60px;
     }
 
-    .requirement {
-      background: #141414;
+    .process-card {
+      background: #151515;
       border: 1px solid #292929;
-      border-radius: 8px;
+      border-radius: 12px;
       padding: 28px;
+      transition: 0.3s;
     }
 
-    .requirement h3 {
+    .process-card:hover {
+      transform: translateY(-4px);
+      border-color: #5b4c2b;
+    }
+
+    .number {
       color: #d8b45a;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .process-card h3 {
       margin-bottom: 10px;
     }
 
-    .requirement p {
+    .process-card p {
       color: #aaa;
       font-size: 15px;
     }
 
-    .timeline {
+    .application-area {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .application-box {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(212,175,55,.07),
+          rgba(255,255,255,.02)
+        );
+      border: 1px solid rgba(212,175,55,.2);
+      border-radius: 18px;
+      padding: 45px;
+    }
+
+    .application-intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .eyebrow {
+      color: #d8b45a;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .application-intro h2 {
+      font-size: 34px;
+      margin: 10px 0 12px;
+    }
+
+    .application-intro p {
+      color: #aaa;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .form-section {
+      margin-top: 35px;
+      padding-top: 30px;
+      border-top: 1px solid #292929;
+    }
+
+    .form-section h3 {
+      color: #d8b45a;
+      font-size: 19px;
+      margin-bottom: 22px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ddd;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 9px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.35);
+      color: #fff;
+      outline: none;
+      font-family: inherit;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #d8b45a;
+      box-shadow: 0 0 0 3px rgba(216,180,90,.08);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #777;
+    }
+
+    .form-group select option {
+      background: #111;
+      color: #fff;
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .agreement {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 10px 0 25px;
+      color: #aaa;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .agreement input {
+      margin-top: 5px;
+      accent-color: #d8b45a;
+    }
+
+    .submit-button {
+      border: none;
+      border-radius: 9px;
+      padding: 15px 27px;
+      background: #d8b45a;
+      color: #111;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-button:hover {
+      background: #f0d27c;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(216,180,90,.18);
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      padding: 17px;
+      border-radius: 9px;
+      border: 1px solid rgba(216,180,90,.35);
+      background: rgba(216,180,90,.07);
+      color: #d8b45a;
+    }
+
+    .faq {
       max-width: 850px;
       margin: auto;
     }
 
-    .step {
-      display: flex;
-      gap: 25px;
-      margin-bottom: 25px;
-      background: #141414;
-      border: 1px solid #292929;
-      border-radius: 8px;
-      padding: 28px;
-    }
-
-    .number {
-      min-width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: #d8b45a;
-      color: #111;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-
-    .step h3 {
-      margin-bottom: 7px;
-    }
-
-    .step p {
-      color: #aaa;
-      font-size: 15px;
-    }
-
-    .notice {
-      margin-top: 40px;
-      padding: 25px;
-      border-left: 3px solid #d8b45a;
-      background: #17140d;
-      color: #bbb;
-    }
-
-    .application {
-      background: #101010;
-      text-align: center;
-    }
-
-    .application-box {
-      max-width: 700px;
-      margin: auto;
+    details {
       background: #151515;
       border: 1px solid #292929;
-      border-radius: 10px;
-      padding: 40px 25px;
+      border-radius: 9px;
+      margin-bottom: 12px;
+      padding: 20px;
     }
 
-    .application-box h2 {
-      margin-bottom: 15px;
+    summary {
+      color: #d8b45a;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    .application-box p {
+    details p {
       color: #aaa;
-      margin-bottom: 25px;
+      margin-top: 12px;
+    }
+
+    .final-cta {
+      text-align: center;
+      background:
+        linear-gradient(135deg, #1d180d, #090909);
+    }
+
+    .final-cta h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .final-cta p {
+      max-width: 700px;
+      margin: auto;
+      color: #aaa;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 26px;
+      margin-top: 25px;
+      padding: 14px 25px;
+      border-radius: 6px;
       background: #d8b45a;
       color: #111;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     .btn:hover {
       background: #f0d27c;
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
-      padding: 30px 20px;
-      color: #777;
+      padding: 35px 20px;
+      background: #050505;
       border-top: 1px solid #292929;
+      color: #777;
       font-size: 13px;
     }
 
     footer a {
       color: #aaa;
       text-decoration: none;
-      margin: 0 8px;
+      margin: 0 7px;
     }
 
-    @media (max-width: 750px) {
-      .requirements {
+    footer a:hover {
+      color: #d8b45a;
+    }
+
+    @media (max-width: 850px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav ul {
+        justify-content: center;
+        gap: 10px 14px;
+      }
+
+      .process {
         grid-template-columns: 1fr;
       }
 
-      .step {
-        padding: 22px;
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
       }
 
-      nav a {
-        margin-left: 8px;
-        font-size: 12px;
+      .application-box {
+        padding: 28px 20px;
+      }
+
+      section {
+        padding: 65px 18px;
+      }
+
+      .heading h2 {
+        font-size: 31px;
+      }
+
+      .application-intro h2 {
+        font-size: 29px;
+      }
+
+      .final-cta h2 {
+        font-size: 32px;
       }
     }
   </style>
@@ -242,188 +439,755 @@
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">THE ORGANIZATION</div>
+  <header>
 
-    <div>
-      <a href="index.html">Home</a>
-      <a href="enlightenment.html">Enlightenment</a>
-      <a href="faq.html">FAQ</a>
-    </div>
-  </nav>
-</header>
+    <nav>
 
-<section class="hero">
-  <div class="symbol">△</div>
+      <div class="logo">
+        ILLUMINATI • GLOBAL UNITY
+      </div>
 
-  <h1>How to <span>Join</span></h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enlightenment.html">Enlightenment</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
 
-  <p>
-    Membership begins with understanding. Follow the steps below and make
-    an informed decision before submitting your interest.
-  </p>
-</section>
+    </nav>
 
-<section>
-  <div class="container">
+  </header>
 
-    <div class="section-title">
-      <h2>Before You Apply</h2>
-      <p>Make sure you understand the basic expectations.</p>
+
+  <section class="hero">
+
+    <div class="symbol">
+      🔺
     </div>
 
-    <div class="requirements">
+    <h1>
+      <span class="gold">Join</span> the Journey
+    </h1>
 
-      <div class="requirement">
-        <h3>18+ Recommended</h3>
+    <p>
+      Explore the principles, understand the process and express
+      your interest in participating voluntarily.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          The <span class="gold">Membership Process</span>
+        </h2>
+
         <p>
-          Applicants should meet the organization's stated age requirements
-          and applicable local laws.
+          Take time to understand each stage before submitting
+          your application.
         </p>
+
       </div>
 
-      <div class="requirement">
-        <h3>Understand the Organization</h3>
+
+      <div class="process">
+
+        <div class="process-card">
+
+          <div class="number">
+            STEP 01
+          </div>
+
+          <h3>
+            Explore
+          </h3>
+
+          <p>
+            Read the available information about the history,
+            principles and philosophy presented on this website.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="number">
+            STEP 02
+          </div>
+
+          <h3>
+            Understand
+          </h3>
+
+          <p>
+            Review the enlightenment material and make sure you
+            understand the expectations associated with participation.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="number">
+            STEP 03
+          </div>
+
+          <h3>
+            Apply
+          </h3>
+
+          <p>
+            Complete the application below if you wish to express
+            your interest.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="number">
+            STEP 04
+          </div>
+
+          <h3>
+            Review
+          </h3>
+
+          <p>
+            Applications can be reviewed according to the applicable
+            membership requirements.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="number">
+            STEP 05
+          </div>
+
+          <h3>
+            Orientation
+          </h3>
+
+          <p>
+            Applicants who proceed can receive information about
+            standards, responsibilities and participation.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="number">
+            STEP 06
+          </div>
+
+          <h3>
+            Decide
+          </h3>
+
+          <p>
+            Make your own informed decision about whether you wish
+            to continue.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="dark">
+
+    <div class="application-area">
+
+      <div class="application-box">
+
+        <div class="application-intro">
+
+          <span class="eyebrow">
+            MEMBERSHIP APPLICATION
+          </span>
+
+          <h2>
+            Express Your <span class="gold">Interest</span>
+          </h2>
+
+          <p>
+            Complete the form below with accurate information.
+            Submission indicates that you are voluntarily expressing
+            interest in learning more about participation.
+          </p>
+
+        </div>
+
+
+        <form id="joinForm">
+
+
+          <!-- PERSONAL INFORMATION -->
+
+          <div class="form-section">
+
+            <h3>
+              Personal Information
+            </h3>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="firstName">
+                  First Name
+                </label>
+
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Enter your first name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="middleName">
+                  Middle Name
+                </label>
+
+                <input
+                  type="text"
+                  id="middleName"
+                  name="middleName"
+                  placeholder="Enter your middle name"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="lastName">
+                  Last Name
+                </label>
+
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Enter your last name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="maritalStatus">
+                  Marital Status
+                </label>
+
+                <select
+                  id="maritalStatus"
+                  name="maritalStatus"
+                  required
+                >
+
+                  <option value="">
+                    Select marital status
+                  </option>
+
+                  <option value="single">
+                    Single
+                  </option>
+
+                  <option value="married">
+                    Married
+                  </option>
+
+                  <option value="divorced">
+                    Divorced
+                  </option>
+
+                  <option value="widowed">
+                    Widowed
+                  </option>
+
+                  <option value="prefer-not-to-say">
+                    Prefer not to say
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="age">
+                  Age
+                </label>
+
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  placeholder="Enter your age"
+                  min="18"
+                  max="120"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="gender">
+                  Gender
+                </label>
+
+                <select
+                  id="gender"
+                  name="gender"
+                  required
+                >
+
+                  <option value="">
+                    Select gender
+                  </option>
+
+                  <option value="male">
+                    Male
+                  </option>
+
+                  <option value="female">
+                    Female
+                  </option>
+
+                  <option value="other">
+                    Other
+                  </option>
+
+                  <option value="prefer-not-to-say">
+                    Prefer not to say
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="occupation">
+                Occupation
+              </label>
+
+              <input
+                type="text"
+                id="occupation"
+                name="occupation"
+                placeholder="Enter your occupation"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- CONTACT INFORMATION -->
+
+          <div class="form-section">
+
+            <h3>
+              Contact Information
+            </h3>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="email">
+                  Email
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- LOCATION -->
+
+          <div class="form-section">
+
+            <h3>
+              Location
+            </h3>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="country">
+                  Country
+                </label>
+
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  placeholder="Enter your country"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="state">
+                  State
+                </label>
+
+                <input
+                  type="text"
+                  id="state"
+                  name="state"
+                  placeholder="Enter your state"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="city">
+                  City
+                </label>
+
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Enter your city"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="houseAddress">
+                  House Address
+                </label>
+
+                <input
+                  type="text"
+                  id="houseAddress"
+                  name="houseAddress"
+                  placeholder="Enter your house address"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- AGREEMENT -->
+
+          <div class="form-section">
+
+            <label class="agreement">
+
+              <input
+                type="checkbox"
+                id="agreement"
+                name="agreement"
+                required
+              >
+
+              <span>
+                I confirm that I am submitting this application
+                voluntarily and that the information I have provided
+                is accurate.
+              </span>
+
+            </label>
+
+
+            <button
+              type="submit"
+              class="submit-button"
+            >
+              Submit Application →
+            </button>
+
+
+            <div
+              id="successMessage"
+              class="success-message"
+            ></div>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          Before You <span class="gold">Apply</span>
+        </h2>
+
         <p>
-          Read the available educational material and understand what
-          participation involves.
+          Make sure you understand the basic principles of responsible
+          participation.
         </p>
+
       </div>
 
-      <div class="requirement">
-        <h3>Join Voluntarily</h3>
-        <p>
-          Membership should be your own decision. You should never feel
-          pressured to join.
-        </p>
+
+      <div class="faq">
+
+        <details>
+
+          <summary>
+            Is participation voluntary?
+          </summary>
+
+          <p>
+            Yes. A person should make their own decision about whether
+            to participate and should not be pressured into doing so.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Should I understand the information first?
+          </summary>
+
+          <p>
+            Yes. Review the history, principles and enlightenment
+            material before making a decision.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Can I ask questions?
+          </summary>
+
+          <p>
+            Yes. Questions should be encouraged when a person needs
+            clarification before proceeding.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Are harmful acts part of joining?
+          </summary>
+
+          <p>
+            No. Participation should not require anyone to harm
+            themselves, another person or an animal, or to commit
+            an illegal act.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            What happens after an application?
+          </summary>
+
+          <p>
+            An application can be reviewed according to the applicable
+            membership requirements. Further information can then be
+            provided where appropriate.
+          </p>
+
+        </details>
+
       </div>
 
     </div>
 
-    <div class="section-title">
-      <h2>The Membership Process</h2>
-      <p>A simple step-by-step path from learning to participation.</p>
-    </div>
+  </section>
 
-    <div class="timeline">
 
-      <div class="step">
-        <div class="number">1</div>
+  <section class="final-cta">
 
-        <div>
-          <h3>Explore</h3>
-          <p>
-            Read the organization's introduction, philosophy, values,
-            expectations, and educational information.
-          </p>
-        </div>
-      </div>
+    <div class="container">
 
-      <div class="step">
-        <div class="number">2</div>
-
-        <div>
-          <h3>Learn</h3>
-          <p>
-            Complete the available enlightenment material and take time
-            to understand the organization's principles.
-          </p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="number">3</div>
-
-        <div>
-          <h3>Submit Your Interest</h3>
-          <p>
-            Provide the requested information through the official
-            application or contact channel.
-          </p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="number">4</div>
-
-        <div>
-          <h3>Application Review</h3>
-          <p>
-            Your application can be reviewed according to the organization's
-            membership requirements and standards.
-          </p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="number">5</div>
-
-        <div>
-          <h3>Orientation</h3>
-          <p>
-            Applicants who proceed can receive further information about
-            community standards, responsibilities, and participation.
-          </p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="number">6</div>
-
-        <div>
-          <h3>Membership Decision</h3>
-          <p>
-            After reviewing the information, you can freely decide whether
-            you want to continue with membership.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="notice">
-      <strong>Important:</strong>
-      Never provide passwords, banking credentials, cryptocurrency wallet
-      recovery phrases, or other highly sensitive information as part of
-      an application. Any legitimate membership requirements should be
-      clearly explained before participation.
-    </div>
-
-  </div>
-</section>
-
-<section class="application">
-  <div class="container">
-
-    <div class="application-box">
-
-      <h2>Interested in Membership?</h2>
+      <h2>
+        Begin With <span class="gold">Knowledge</span>
+      </h2>
 
       <p>
-        Make sure you have read the enlightenment material and understand
-        the organization's expectations before proceeding.
+        Explore the history and enlightenment material before deciding
+        whether you want to express your interest.
       </p>
 
-      <a href="contact.html" class="btn">
-        Submit Your Interest
+      <a href="enlightenment.html" class="btn">
+        Explore Enlightenment →
       </a>
 
     </div>
 
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2026 The Organization. All rights reserved.</p>
 
-  <p style="margin-top:10px;">
-    <a href="index.html">Home</a>
-    <a href="enlightenment.html">Enlightenment</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-  </p>
-</footer>
+  <footer>
+
+    <p>
+      © 2026 Illuminati • Global Unity & Enlightenment
+    </p>
+
+    <p style="margin-top:12px;">
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="enlightenment.html">Enlightenment</a>
+      <a href="join.html">Join</a>
+
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    const joinForm =
+      document.getElementById("joinForm");
+
+    const successMessage =
+      document.getElementById("successMessage");
+
+
+    joinForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+
+      const firstName =
+        document.getElementById("firstName").value.trim();
+
+      const lastName =
+        document.getElementById("lastName").value.trim();
+
+
+      successMessage.style.display = "block";
+
+      successMessage.textContent =
+        "Thank you, " +
+        firstName +
+        " " +
+        lastName +
+        ". Your application has been completed successfully on this page.";
+
+
+      joinForm.reset();
+
+
+      successMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>
