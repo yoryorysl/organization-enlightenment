@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enlightenment | The Organization</title>
+
+  <meta name="description" content="Explore enlightenment, personal development, knowledge, reflection, unity and responsible participation.">
+
+  <title>Enlightenment | Illuminati — Global Unity & Enlightenment</title>
 
   <style>
     * {
@@ -12,41 +15,57 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #090909;
+      background: #080808;
       color: #f5f5f5;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     header {
-      background: #080808;
-      border-bottom: 1px solid #292929;
-      padding: 18px 20px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.97);
+      border-bottom: 1px solid #292929;
+      backdrop-filter: blur(10px);
     }
 
     nav {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
+      padding: 16px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .logo {
       color: #d8b45a;
       font-weight: bold;
       letter-spacing: 2px;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     nav a {
-      color: #ddd;
+      color: #ccc;
       text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
+      font-size: 13px;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -54,36 +73,40 @@
     }
 
     .hero {
+      padding: 110px 20px 90px;
       text-align: center;
-      padding: 90px 20px;
-      background: radial-gradient(circle, #242016, #090909 65%);
+      background:
+        radial-gradient(circle at center, #292210 0%, #111 42%, #050505 75%);
     }
 
     .symbol {
-      font-size: 55px;
-      color: #d8b45a;
+      font-size: 48px;
       margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: clamp(40px, 7vw, 65px);
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 70px);
+      line-height: 1.1;
       margin-bottom: 20px;
     }
 
-    h1 span,
-    h2 span {
+    .gold {
       color: #d8b45a;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 780px;
       margin: auto;
-      color: #bbb;
+      color: #bcbcbc;
       font-size: 17px;
     }
 
     section {
-      padding: 75px 20px;
+      padding: 80px 20px;
+    }
+
+    .dark {
+      background: #101010;
     }
 
     .container {
@@ -91,123 +114,242 @@
       margin: auto;
     }
 
-    .section-title {
+    .heading {
       text-align: center;
       margin-bottom: 45px;
     }
 
-    .section-title h2 {
+    .heading h2 {
       font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: #999;
-    }
-
-    .content {
-      background: #131313;
-      border: 1px solid #292929;
-      border-radius: 10px;
-      padding: 35px;
-      margin-bottom: 25px;
-    }
-
-    .content h3 {
-      color: #d8b45a;
+      line-height: 1.2;
       margin-bottom: 12px;
-      font-size: 23px;
     }
 
-    .content p {
-      color: #bbb;
-      margin-bottom: 15px;
+    .heading p {
+      color: #999;
+      max-width: 720px;
+      margin: auto;
     }
 
-    .stages {
+    .intro-box {
+      max-width: 850px;
+      margin: auto;
+      background: #151515;
+      border: 1px solid #2c2c2c;
+      border-radius: 12px;
+      padding: 35px;
+    }
+
+    .intro-box p {
+      color: #b5b5b5;
+      margin-bottom: 16px;
+    }
+
+    .intro-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .principles {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
-    .stage {
+    .principle {
       background: #151515;
       border: 1px solid #292929;
+      border-radius: 10px;
       padding: 28px;
-      border-radius: 8px;
+      transition: 0.3s;
     }
 
-    .stage-number {
+    .principle:hover {
+      transform: translateY(-4px);
+      border-color: #5b4c2b;
+    }
+
+    .icon {
       color: #d8b45a;
-      font-weight: bold;
-      font-size: 13px;
-      letter-spacing: 1px;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .principle h3 {
       margin-bottom: 10px;
     }
 
-    .stage h3 {
-      margin-bottom: 10px;
-    }
-
-    .stage p {
+    .principle p {
       color: #aaa;
       font-size: 15px;
     }
 
-    .notice {
-      border-left: 3px solid #d8b45a;
-      background: #15130d;
+    .journey {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .journey-step {
+      display: flex;
+      gap: 22px;
       padding: 25px;
-      margin-top: 30px;
-      color: #bbb;
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .number {
+      flex: 0 0 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #d8b45a;
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .journey-step h3 {
+      margin-bottom: 7px;
+    }
+
+    .journey-step p {
+      color: #aaa;
+    }
+
+    .reflection {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .reflection-card {
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .reflection-card h3 {
+      color: #d8b45a;
+      margin-bottom: 10px;
+    }
+
+    .reflection-card p {
+      color: #aaa;
+    }
+
+    .quote {
+      max-width: 850px;
+      margin: 35px auto 0;
+      padding: 25px;
+      border-left: 3px solid #d8b45a;
+      background: #19160e;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    .notice {
+      max-width: 850px;
+      margin: 30px auto 0;
+      padding: 24px;
+      border-radius: 10px;
+      border: 1px solid #5b4d2d;
+      background: #19160e;
+      color: #aaa;
+    }
+
+    .notice strong {
+      color: #d8b45a;
     }
 
     .cta {
       text-align: center;
-      background: #101010;
+      background:
+        linear-gradient(135deg, #1d180d, #090909);
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: auto;
+      color: #aaa;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 25px;
       padding: 14px 25px;
+      border-radius: 6px;
       background: #d8b45a;
       color: #111;
       text-decoration: none;
-      border-radius: 5px;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     .btn:hover {
       background: #f0d27c;
+      transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
-      padding: 30px 20px;
-      color: #777;
+      padding: 35px 20px;
+      background: #050505;
       border-top: 1px solid #292929;
+      color: #777;
       font-size: 13px;
     }
 
     footer a {
       color: #aaa;
       text-decoration: none;
-      margin: 0 8px;
+      margin: 0 7px;
     }
 
-    @media (max-width: 700px) {
-      nav a {
-        margin-left: 8px;
-        font-size: 12px;
+    footer a:hover {
+      color: #d8b45a;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        flex-direction: column;
       }
 
-      .stages {
+      nav ul {
+        justify-content: center;
+        gap: 10px 14px;
+      }
+
+      .principles,
+      .reflection {
         grid-template-columns: 1fr;
       }
 
-      .content {
-        padding: 25px;
+      .journey-step {
+        gap: 15px;
+      }
+
+      section {
+        padding: 65px 18px;
+      }
+
+      .intro-box,
+      .reflection-card,
+      .principle {
+        padding: 24px;
+      }
+
+      .heading h2 {
+        font-size: 31px;
       }
     }
   </style>
@@ -215,179 +357,532 @@
 
 <body>
 
-<header>
-  <nav>
-    <div class="logo">THE ORGANIZATION</div>
+  <header>
+    <nav>
 
-    <div>
-      <a href="index.html">Home</a>
-      <a href="join.html">Join</a>
-      <a href="faq.html">FAQ</a>
-    </div>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="symbol">△</div>
-
-  <h1>
-    The Path of <span>Enlightenment</span>
-  </h1>
-
-  <p>
-    Enlightenment begins with learning. Explore the principles, philosophy,
-    responsibilities, and expectations of the organization before deciding
-    whether participation is right for you.
-  </p>
-</section>
-
-<section>
-  <div class="container">
-
-    <div class="section-title">
-      <h2>What Is <span>Enlightenment?</span></h2>
-      <p>A journey centered on knowledge, reflection, and personal development.</p>
-    </div>
-
-    <div class="content">
-      <h3>Knowledge Before Membership</h3>
-
-      <p>
-        Every prospective participant should have the opportunity to understand
-        what an organization represents before making a decision to join.
-      </p>
-
-      <p>
-        Our enlightenment section provides introductory information about
-        philosophy, values, community expectations, personal responsibility,
-        and the importance of making informed choices.
-      </p>
-    </div>
-
-    <div class="content">
-      <h3>Think for Yourself</h3>
-
-      <p>
-        Enlightenment should encourage thoughtful questions rather than require
-        someone to accept information without examination.
-      </p>
-
-      <p>
-        Take your time, ask questions, evaluate information carefully, and make
-        your own decision about whether you wish to continue.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section style="background:#101010;">
-  <div class="container">
-
-    <div class="section-title">
-      <h2>Stages of <span>Learning</span></h2>
-      <p>
-        Follow the educational path at your own pace.
-      </p>
-    </div>
-
-    <div class="stages">
-
-      <div class="stage">
-        <div class="stage-number">STAGE 01</div>
-        <h3>Introduction</h3>
-        <p>
-          Learn the basic history, purpose, terminology, and publicly available
-          information about the organization.
-        </p>
+      <div class="logo">
+        ILLUMINATI • GLOBAL UNITY
       </div>
 
-      <div class="stage">
-        <div class="stage-number">STAGE 02</div>
-        <h3>Philosophy</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enlightenment.html">Enlightenment</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <section class="hero">
+
+    <div class="symbol">
+      ✦
+    </div>
+
+    <h1>
+      The Path of <span class="gold">Enlightenment</span>
+    </h1>
+
+    <p>
+      A journey centered on knowledge, reflection, personal development,
+      responsible conduct and understanding.
+    </p>
+
+  </section>
+
+
+  <section>
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          What Does <span class="gold">Enlightenment</span> Mean?
+        </h2>
+
         <p>
-          Explore the organization's stated beliefs, principles, values,
-          educational ideas, and approach to personal development.
+          Understanding should come before commitment.
         </p>
+
       </div>
 
-      <div class="stage">
-        <div class="stage-number">STAGE 03</div>
-        <h3>Self-Reflection</h3>
-        <p>
-          Consider your personal goals, motivations, boundaries, and
-          expectations before taking any further step.
-        </p>
-      </div>
+      <div class="intro-box">
 
-      <div class="stage">
-        <div class="stage-number">STAGE 04</div>
-        <h3>Questions</h3>
         <p>
-          Review the frequently asked questions and seek clarification about
-          anything you do not understand.
+          Enlightenment can be understood as a continuing process of
+          learning, questioning assumptions, developing self-awareness
+          and seeking a clearer understanding of oneself and the world.
         </p>
-      </div>
 
-      <div class="stage">
-        <div class="stage-number">STAGE 05</div>
-        <h3>Responsibilities</h3>
         <p>
-          Understand the community standards, code of conduct, privacy
-          practices, and responsibilities associated with participation.
+          The philosophy presented on this website emphasizes knowledge,
+          discipline, reflection, cooperation and personal responsibility.
         </p>
-      </div>
 
-      <div class="stage">
-        <div class="stage-number">STAGE 06</div>
-        <h3>Informed Decision</h3>
         <p>
-          After reviewing the available information, decide freely whether
-          you want to continue toward the membership process.
+          It is not necessary to accept every claim or interpretation.
+          Visitors are encouraged to examine information carefully,
+          distinguish historical evidence from modern narratives and
+          make their own informed decisions.
         </p>
+
       </div>
 
     </div>
 
-    <div class="notice">
-      <strong>Important:</strong>
-      Participation should always be voluntary. No person should be pressured
-      or threatened into joining, remaining a member, providing personal
-      information, or making a payment.
+  </section>
+
+
+  <section class="dark">
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          Six Principles of <span class="gold">Growth</span>
+        </h2>
+
+        <p>
+          Areas that can support a thoughtful personal-development journey.
+        </p>
+
+      </div>
+
+
+      <div class="principles">
+
+        <div class="principle">
+
+          <div class="icon">◈</div>
+
+          <h3>
+            Knowledge
+          </h3>
+
+          <p>
+            Continue learning through reading, research, observation
+            and thoughtful discussion.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="icon">◎</div>
+
+          <h3>
+            Self-Awareness
+          </h3>
+
+          <p>
+            Examine your beliefs, decisions, strengths, weaknesses
+            and motivations honestly.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="icon">△</div>
+
+          <h3>
+            Discipline
+          </h3>
+
+          <p>
+            Develop consistency and responsibility in the way you
+            approach your goals and commitments.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="icon">♡</div>
+
+          <h3>
+            Compassion
+          </h3>
+
+          <p>
+            Treat other people with dignity and consider how your
+            actions affect those around you.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="icon">∞</div>
+
+          <h3>
+            Unity
+          </h3>
+
+          <p>
+            Look for constructive ways to cooperate with people
+            despite differences in background or perspective.
+          </p>
+
+        </div>
+
+
+        <div class="principle">
+
+          <div class="icon">✦</div>
+
+          <h3>
+            Service
+          </h3>
+
+          <p>
+            Use your knowledge and abilities in ways that can
+            contribute positively to your community.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-  </div>
-</section>
+  </section>
 
-<section class="cta">
-  <div class="container">
 
-    <div class="section-title">
-      <h2>Ready for the Next Step?</h2>
+  <section>
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          Six Steps on the <span class="gold">Journey</span>
+        </h2>
+
+        <p>
+          A practical framework for exploring the subject responsibly.
+        </p>
+
+      </div>
+
+
+      <div class="journey">
+
+        <div class="journey-step">
+
+          <div class="number">1</div>
+
+          <div>
+
+            <h3>
+              Learn
+            </h3>
+
+            <p>
+              Begin by studying the history, philosophy and different
+              interpretations associated with the Illuminati.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="journey-step">
+
+          <div class="number">2</div>
+
+          <div>
+
+            <h3>
+              Question
+            </h3>
+
+            <p>
+              Ask questions and examine claims rather than accepting
+              information simply because it is presented with confidence.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="journey-step">
+
+          <div class="number">3</div>
+
+          <div>
+
+            <h3>
+              Reflect
+            </h3>
+
+            <p>
+              Consider your personal goals, values, expectations and
+              reasons for exploring the subject.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="journey-step">
+
+          <div class="number">4</div>
+
+          <div>
+
+            <h3>
+              Understand
+            </h3>
+
+            <p>
+              Make sure you understand the principles, expectations
+              and responsibilities before deciding whether to continue.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="journey-step">
+
+          <div class="number">5</div>
+
+          <div>
+
+            <h3>
+              Apply
+            </h3>
+
+            <p>
+              Put constructive principles such as discipline,
+              compassion, learning and responsible conduct into practice.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="journey-step">
+
+          <div class="number">6</div>
+
+          <div>
+
+            <h3>
+              Continue Learning
+            </h3>
+
+            <p>
+              Enlightenment is presented as a continuing process rather
+              than something that is completed in a single moment.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="dark">
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          Questions for <span class="gold">Reflection</span>
+        </h2>
+
+        <p>
+          Before making an important decision, take time to consider
+          your own position.
+        </p>
+
+      </div>
+
+
+      <div class="reflection">
+
+        <div class="reflection-card">
+
+          <h3>
+            Why am I interested?
+          </h3>
+
+          <p>
+            Identify what has attracted your attention and whether
+            your expectations are realistic.
+          </p>
+
+        </div>
+
+
+        <div class="reflection-card">
+
+          <h3>
+            What do I want to learn?
+          </h3>
+
+          <p>
+            Consider the knowledge, skills or understanding you hope
+            to gain from further exploration.
+          </p>
+
+        </div>
+
+
+        <div class="reflection-card">
+
+          <h3>
+            What are my boundaries?
+          </h3>
+
+          <p>
+            Know what you are comfortable with and never allow
+            another person to pressure you beyond your boundaries.
+          </p>
+
+        </div>
+
+
+        <div class="reflection-card">
+
+          <h3>
+            Have I checked the information?
+          </h3>
+
+          <p>
+            Compare important claims with reliable historical or
+            independent sources whenever possible.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="quote">
+        "The purpose of learning is not simply to collect answers,
+        but to develop the ability to ask better questions."
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <div class="container">
+
+      <div class="heading">
+
+        <h2>
+          Responsible <span class="gold">Enlightenment</span>
+        </h2>
+
+        <p>
+          Knowledge should strengthen judgment, not replace it.
+        </p>
+
+      </div>
+
+
+      <div class="intro-box">
+
+        <p>
+          Enlightenment should encourage independent thought,
+          respect for others and responsible decision-making.
+        </p>
+
+        <p>
+          No philosophy or organization should require a person to
+          harm themselves, harm another person, commit an illegal act
+          or surrender their ability to make informed choices.
+        </p>
+
+        <p>
+          If something is unclear, ask questions before proceeding.
+          A thoughtful approach allows people to explore ideas while
+          maintaining personal responsibility and lawful conduct.
+        </p>
+
+      </div>
+
+
+      <div class="notice">
+
+        <strong>
+          Remember:
+        </strong>
+
+        Historical facts, personal beliefs and modern internet claims
+        are not necessarily the same thing. Examine each carefully.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Ready to Explore <span class="gold">Further?</span>
+      </h2>
 
       <p>
-        Once you have reviewed the educational material, you can learn about
-        the membership process.
+        Learn about the membership process and decide for yourself
+        whether you want to express interest.
       </p>
 
       <a href="join.html" class="btn">
-        View Membership Process
+        Explore Joining →
       </a>
+
     </div>
 
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2026 The Organization. All rights reserved.</p>
 
-  <p style="margin-top:10px;">
-    <a href="index.html">Home</a>
-    <a href="join.html">Join</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-  </p>
-</footer>
+  <footer>
+
+    <p>
+      © 2026 Illuminati • Global Unity & Enlightenment
+    </p>
+
+    <p style="margin-top:12px;">
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="enlightenment.html">Enlightenment</a>
+      <a href="join.html">Join</a>
+
+    </p>
+
+  </footer>
 
 </body>
 </html>
