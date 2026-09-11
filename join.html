@@ -1147,47 +1147,73 @@
 
 
   <script>
+  const joinForm = document.getElementById("joinForm");
+  const successMessage = document.getElementById("successMessage");
+  const submitButton = joinForm.querySelector(".submit-button");
 
-    const joinForm =
-      document.getElementById("joinForm");
+  const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbx5aDcjggWizh6Ncv6Ndc6e2qovF_QINGIw-ZT5Yj9GKx4eeVn29EZF_uuZQzzPZO3t/exec";
 
-    const successMessage =
-      document.getElementById("successMessage");
+  joinForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
 
+    if (!joinForm.checkValidity()) {
+      joinForm.reportValidity();
+      return;
+    }
 
-    joinForm.addEventListener("submit", function(event) {
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
 
-      event.preventDefault();
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting Application...";
 
+    successMessage.style.display = "block";
+    successMessage.textContent = "Submitting your application...";
 
-      const firstName =
-        document.getElementById("firstName").value.trim();
+    const formData = new FormData(joinForm);
+    const params = new URLSearchParams();
 
-      const lastName =
-        document.getElementById("lastName").value.trim();
+    for (const [key, value] of formData.entries()) {
+      params.append(key, value);
+    }
 
-
-      successMessage.style.display = "block";
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: params.toString()
+      });
 
       successMessage.textContent =
         "Thank you, " +
         firstName +
         " " +
         lastName +
-        ". Your application has been completed successfully on this page.";
-
+        ". Your application has been submitted successfully. Your information has been received for review.";
 
       joinForm.reset();
-
 
       successMessage.scrollIntoView({
         behavior: "smooth",
         block: "center"
       });
 
-    });
+    } catch (error) {
+      successMessage.textContent =
+        "We could not submit your application right now. Please try again.";
 
-  </script>
+      console.error("Application submission error:", error);
+
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Submit Application →";
+    }
+  });
+</script>
 
 </body>
 </html>
