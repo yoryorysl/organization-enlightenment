@@ -1436,7 +1436,23 @@
 
       <!-- APPLICATION FORM -->
 
-      <form id="joinForm" class="application-form">
+      <form
+  id="joinForm"
+  class="application-form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+  <input type="hidden" name="access_key" value="f10410b1-e1a4-431d-a7dc-95f1fca5fa87">
+  <input
+    type="hidden"
+    name="subject"
+    value="New Global Unity & Enlightenment Application"
+  >
+  <input
+    type="hidden"
+    name="from_name"
+    value="Global Unity & Enlightenment"
+  >
 
         <!-- FIRST / MIDDLE NAME -->
 
@@ -2085,52 +2101,56 @@
 ========================= -->
 
 <script>
-
   const joinForm = document.getElementById("joinForm");
 
-  const applicationMessage =
-    document.getElementById("applicationMessage");
-
-
-  joinForm.addEventListener("submit", function(event) {
-
+  joinForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
+    const button = joinForm.querySelector("button[type='submit']");
+    const message = document.getElementById("applicationMessage");
 
-    const firstName =
-      document.getElementById("firstName").value.trim();
+    button.disabled = true;
+    button.innerHTML = "Submitting...";
 
-    const lastName =
-      document.getElementById("lastName").value.trim();
+    try {
+      const response = await fetch(joinForm.action, {
+        method: "POST",
+        body: new FormData(joinForm),
+        headers: {
+          Accept: "application/json"
+        }
+      });
 
+      const result = await response.json();
 
-    applicationMessage.style.display = "block";
+      if (response.ok && result.success) {
+        message.style.display = "block";
+        message.innerHTML =
+          "Application submitted successfully. Thank you for expressing your interest.";
 
+        joinForm.reset();
 
-    applicationMessage.innerHTML =
-      "Thank you, " +
-      firstName +
-      " " +
-      lastName +
-      ". Your application form has been completed successfully on this page.";
+        window.scrollTo({
+          top:
+            message.getBoundingClientRect().top +
+            window.scrollY -
+            150,
+          behavior: "smooth"
+        });
+      } else {
+        message.style.display = "block";
+        message.innerHTML =
+          "There was a problem submitting your application. Please try again.";
+      }
+    } catch (error) {
+      message.style.display = "block";
+      message.innerHTML =
+        "There was a problem submitting your application. Please try again.";
+    }
 
-
-    joinForm.reset();
-
-
-    window.scrollTo({
-
-      top:
-        applicationMessage.getBoundingClientRect().top +
-        window.scrollY -
-        150,
-
-      behavior: "smooth"
-
-    });
-
+    button.disabled = false;
+    button.innerHTML = "Submit Application <span>→</span>";
   });
-
 </script>
 
 </body>
