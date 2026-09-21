@@ -11,7 +11,7 @@ export default {
           ["Middle Name", "Middle Name"],
           ["Last Name", "Last Name"],
           ["Marital Status", "Marital Status"],
-          ["Age", "Age"],
+          ["Date of Birth", "Date of Birth"],
           ["Gender", "Gender"],
           ["Occupation", "Occupation"],
           ["Email", "Email"],
