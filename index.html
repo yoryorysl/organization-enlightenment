@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Global Unity and Enlightenment — information about history, philosophy, principles and membership exploration associated with the Illuminati.">
+  <meta
+    name="description"
+    content="Global Unity and Enlightenment — information about history, philosophy, principles and membership exploration associated with the Illuminati."
+  >
 
   <title>Global Unity & Enlightenment | Official Website</title>
 
   <style>
-
-    /* =========================
-       RESET
-    ========================= */
-
     * {
       margin: 0;
       padding: 0;
@@ -31,10 +29,6 @@
       color: #f5f5f5;
       line-height: 1.75;
     }
-
-    /* =========================
-       HEADER
-    ========================= */
 
     header {
       position: fixed;
@@ -85,10 +79,6 @@
       color: #d8b45a;
     }
 
-    /* =========================
-       GENERAL
-    ========================= */
-
     section {
       padding: 90px 20px;
       scroll-margin-top: 85px;
@@ -124,9 +114,7 @@
       margin: auto;
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -164,9 +152,7 @@
       font-size: 18px;
     }
 
-    /* =========================
-       BUTTONS
-    ========================= */
+    /* BUTTONS */
 
     .buttons {
       margin-top: 32px;
@@ -202,9 +188,7 @@
       color: #d8b45a;
     }
 
-    /* =========================
-       BOXES
-    ========================= */
+    /* BOXES */
 
     .box {
       background: #151515;
@@ -234,9 +218,7 @@
       font-style: italic;
     }
 
-    /* =========================
-       CARDS
-    ========================= */
+    /* CARDS */
 
     .grid {
       display: grid;
@@ -272,9 +254,7 @@
       font-size: 15px;
     }
 
-    /* =========================
-       HISTORY
-    ========================= */
+    /* HISTORY */
 
     .history {
       display: grid;
@@ -301,9 +281,7 @@
       font-size: 15px;
     }
 
-    /* =========================
-       TIMELINE
-    ========================= */
+    /* TIMELINE */
 
     .timeline {
       max-width: 900px;
@@ -340,9 +318,7 @@
       color: #aaa;
     }
 
-    /* =========================
-       RULES
-    ========================= */
+    /* RULES */
 
     .rules {
       max-width: 900px;
@@ -375,9 +351,7 @@
       color: #bbb;
     }
 
-    /* =========================
-       NOTICE
-    ========================= */
+    /* NOTICE */
 
     .notice {
       max-width: 900px;
@@ -393,9 +367,7 @@
       color: #d8b45a;
     }
 
-    /* =========================
-       JOIN PROCESS
-    ========================= */
+    /* JOIN PROCESS */
 
     .process-grid {
       display: grid;
@@ -436,9 +408,7 @@
       line-height: 1.7;
     }
 
-    /* =========================
-       APPLICATION
-    ========================= */
+    /* APPLICATION */
 
     .application-wrapper {
       display: grid;
@@ -494,9 +464,7 @@
       color: #ddd;
     }
 
-    /* =========================
-       FORM
-    ========================= */
+    /* FORM */
 
     .application-form {
       width: 100%;
@@ -504,11 +472,14 @@
 
     .form-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 20px;
+      width: 100%;
     }
 
     .form-group {
+      width: 100%;
+      min-width: 0;
       margin-bottom: 20px;
     }
 
@@ -523,8 +494,14 @@
     .form-group input,
     .form-group select,
     .form-group textarea {
+      display: block;
       width: 100%;
-      padding: 15px 16px;
+      max-width: 100%;
+      min-width: 0;
+      height: 52px;
+      min-height: 52px;
+      margin: 0;
+      padding: 0 16px;
       border-radius: 10px;
       border: 1px solid rgba(255,255,255,.12);
       background: rgba(0,0,0,.35);
@@ -532,7 +509,11 @@
       outline: none;
       font-family: inherit;
       font-size: 14px;
+      line-height: normal;
       transition: 0.25s ease;
+      box-sizing: border-box;
+      appearance: none;
+      -webkit-appearance: none;
     }
 
     .form-group input:focus,
@@ -547,15 +528,25 @@
       color: #777;
     }
 
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
     .form-group select option {
       background: #111;
       color: #fff;
     }
+
+    /* DATE OF BIRTH */
+
+    .form-group input[type="date"] {
+      height: 52px;
+      min-height: 52px;
+      padding: 0 16px;
+      line-height: 52px;
+    }
+
+    .form-group input[type="date"]::-webkit-date-and-time-value {
+      text-align: left;
+    }
+
+    /* AGREEMENT */
 
     .checkbox-row {
       display: flex;
@@ -569,9 +560,17 @@
     }
 
     .checkbox-row input {
+      width: auto;
+      min-width: auto;
+      height: auto;
+      min-height: auto;
       margin-top: 4px;
+      appearance: auto;
+      -webkit-appearance: auto;
       accent-color: #d4af37;
     }
+
+    /* SUBMIT BUTTON */
 
     .gold-btn {
       border: none;
@@ -593,6 +592,12 @@
       box-shadow: 0 10px 30px rgba(212,175,55,.2);
     }
 
+    .gold-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+    }
+
     .gold-btn span {
       font-size: 18px;
     }
@@ -608,9 +613,7 @@
       line-height: 1.6;
     }
 
-    /* =========================
-       FAQ
-    ========================= */
+    /* FAQ */
 
     .faq {
       max-width: 850px;
@@ -636,9 +639,7 @@
       margin-top: 12px;
     }
 
-    /* =========================
-       CTA
-    ========================= */
+    /* CTA */
 
     .cta {
       text-align: center;
@@ -661,9 +662,7 @@
       color: #aaa;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       text-align: center;
@@ -685,9 +684,7 @@
       color: #d8b45a;
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 850px) {
 
@@ -734,6 +731,26 @@
         gap: 0;
       }
 
+      .form-group {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea,
+      .form-group input[type="date"] {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 52px;
+        min-height: 52px;
+      }
+
+      .form-group input[type="date"] {
+        line-height: 52px;
+      }
+
       .step {
         gap: 15px;
       }
@@ -746,20 +763,13 @@
         font-size: 32px;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
-
   <nav>
-
     <div class="logo">
       ILLUMINATI • GLOBAL UNITY
     </div>
@@ -774,20 +784,11 @@
       <li><a href="#rules">Rules</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-
   </nav>
-
 </header>
 
-
-<!-- =========================
-     HOME
-========================= -->
-
 <section class="hero" id="home">
-
   <div>
-
     <div class="eye">
       👁️ 👁️ 👁️
     </div>
@@ -804,7 +805,6 @@
     </p>
 
     <div class="buttons">
-
       <a href="#enlightenment" class="btn primary">
         Begin Enlightenment
       </a>
@@ -812,24 +812,14 @@
       <a href="#join" class="btn outline">
         Learn How to Join
       </a>
-
     </div>
-
   </div>
-
 </section>
 
-
-<!-- =========================
-     ABOUT
-========================= -->
-
 <section id="about">
-
   <div class="container">
 
     <div class="heading">
-
       <h2>
         🔺 What Is the
         <span class="gold">Illuminati?</span> 🔺
@@ -839,11 +829,9 @@
         Explore the ideas, history and modern narratives surrounding
         the name Illuminati.
       </p>
-
     </div>
 
     <div class="box">
-
       <h3>The Illuminati</h3>
 
       <p>
@@ -872,11 +860,9 @@
       <div class="quote">
         "The Pyramid, the Eye, the Light, the Eternal Circle."
       </div>
-
     </div>
 
     <div class="box">
-
       <h3>Global Unity</h3>
 
       <p>
@@ -890,24 +876,15 @@
         development, humanitarian assistance and a better understanding
         between people.
       </p>
-
     </div>
 
   </div>
-
 </section>
 
-
-<!-- =========================
-     HISTORY
-========================= -->
-
 <section id="history" class="dark">
-
   <div class="container">
 
     <div class="heading">
-
       <h2>
         Historical <span class="gold">Origins</span>
       </h2>
@@ -916,16 +893,12 @@
         The historical Bavarian Illuminati belongs to the European
         Enlightenment of the eighteenth century.
       </p>
-
     </div>
 
     <div class="history">
 
       <div class="history-card">
-
-        <div class="year">
-          1748
-        </div>
+        <div class="year">1748</div>
 
         <h3>
           Johann Adam Weishaupt
@@ -936,14 +909,10 @@
           He later became a professor of canon law at the University
           of Ingolstadt.
         </p>
-
       </div>
 
       <div class="history-card">
-
-        <div class="year">
-          1776
-        </div>
+        <div class="year">1776</div>
 
         <h3>
           The Founding
@@ -954,14 +923,10 @@
           on May 1, 1776. The group was connected with Enlightenment
           ideas concerning reason, education and social reform.
         </p>
-
       </div>
 
       <div class="history-card">
-
-        <div class="year">
-          1780s
-        </div>
+        <div class="year">1780s</div>
 
         <h3>
           Suppression
@@ -971,13 +936,11 @@
           The historical organization was eventually prohibited by
           the Bavarian authorities and declined during the 1780s.
         </p>
-
       </div>
 
     </div>
 
     <div class="box" style="margin-top:25px;">
-
       <h3>
         Historical Context
       </h3>
@@ -994,24 +957,15 @@
         matters of modern belief and narrative rather than established
         historical fact.
       </p>
-
     </div>
 
   </div>
-
 </section>
 
-
-<!-- =========================
-     AIMS
-========================= -->
-
 <section id="aims">
-
   <div class="container">
 
     <div class="heading">
-
       <h2>
         The Stated <span class="gold">Aims</span>
       </h2>
@@ -1019,7 +973,6 @@
       <p>
         Principles expressed in the material supplied for this website.
       </p>
-
     </div>
 
     <div class="grid">
@@ -1080,20 +1033,12 @@
     </div>
 
   </div>
-
 </section>
 
-
-<!-- =========================
-     NO BLOOD SACRIFICES
-========================= -->
-
 <section class="dark">
-
   <div class="container">
 
     <div class="heading">
-
       <h2>
         No <span class="gold">Blood Sacrifices</span>
       </h2>
@@ -1102,7 +1047,6 @@
         A clear statement concerning the joining process described
         on this website.
       </p>
-
     </div>
 
     <div class="box">
@@ -1130,20 +1074,12 @@
     </div>
 
   </div>
-
 </section>
 
-
-<!-- =========================
-     ENLIGHTENMENT
-========================= -->
-
 <section id="enlightenment">
-
   <div class="container">
 
     <div class="heading">
-
       <h2>
         The Path of <span class="gold">Enlightenment</span>
       </h2>
@@ -1151,13 +1087,11 @@
       <p>
         Knowledge should come before membership.
       </p>
-
     </div>
 
     <div class="timeline">
 
       <div class="step">
-
         <div class="number">1</div>
 
         <div>
@@ -1168,11 +1102,9 @@
             publicly available information.
           </p>
         </div>
-
       </div>
 
       <div class="step">
-
         <div class="number">2</div>
 
         <div>
@@ -1183,11 +1115,9 @@
             compassion, service and personal development.
           </p>
         </div>
-
       </div>
 
       <div class="step">
-
         <div class="number">3</div>
 
         <div>
@@ -1198,11 +1128,9 @@
             responsibilities and personal boundaries.
           </p>
         </div>
-
       </div>
 
       <div class="step">
-
         <div class="number">4</div>
 
         <div>
@@ -1213,11 +1141,9 @@
             before deciding whether to proceed.
           </p>
         </div>
-
       </div>
 
       <div class="step">
-
         <div class="number">5</div>
 
         <div>
@@ -1228,11 +1154,9 @@
             the responsibilities associated with participation.
           </p>
         </div>
-
       </div>
 
       <div class="step">
-
         <div class="number">6</div>
 
         <div>
@@ -1242,26 +1166,18 @@
             Decide freely whether participation is right for you.
           </p>
         </div>
-
       </div>
 
     </div>
 
   </div>
-
 </section>
-
-
-<!-- =========================
-     JOIN
-========================= -->
 
 <section id="join" class="dark">
 
   <div class="container">
 
     <div class="heading">
-
       <h2>
         How to <span class="gold">Join</span>
       </h2>
@@ -1269,125 +1185,77 @@
       <p>
         Review the information carefully before expressing interest.
       </p>
-
     </div>
-
-
-    <!-- JOIN PROCESS -->
 
     <div class="process-grid">
 
       <div class="process-card">
+        <div class="process-number">01</div>
 
-        <div class="process-number">
-          01
-        </div>
-
-        <h3>
-          Explore
-        </h3>
+        <h3>Explore</h3>
 
         <p>
           Read the information on this website and learn about the
           organization's stated philosophy and principles.
         </p>
-
       </div>
 
-
       <div class="process-card">
+        <div class="process-number">02</div>
 
-        <div class="process-number">
-          02
-        </div>
-
-        <h3>
-          Learn
-        </h3>
+        <h3>Learn</h3>
 
         <p>
           Review the enlightenment material and make sure you
           understand what participation means.
         </p>
-
       </div>
 
-
       <div class="process-card">
+        <div class="process-number">03</div>
 
-        <div class="process-number">
-          03
-        </div>
-
-        <h3>
-          Express Interest
-        </h3>
+        <h3>Express Interest</h3>
 
         <p>
           Complete the application form below to introduce yourself
           and express your interest.
         </p>
-
       </div>
 
-
       <div class="process-card">
+        <div class="process-number">04</div>
 
-        <div class="process-number">
-          04
-        </div>
-
-        <h3>
-          Application Review
-        </h3>
+        <h3>Application Review</h3>
 
         <p>
           Any application should be reviewed according to clearly
           stated membership requirements.
         </p>
-
       </div>
 
-
       <div class="process-card">
+        <div class="process-number">05</div>
 
-        <div class="process-number">
-          05
-        </div>
-
-        <h3>
-          Orientation
-        </h3>
+        <h3>Orientation</h3>
 
         <p>
           Applicants who proceed can receive information about
           community standards and responsibilities.
         </p>
-
       </div>
 
-
       <div class="process-card">
+        <div class="process-number">06</div>
 
-        <div class="process-number">
-          06
-        </div>
-
-        <h3>
-          Membership Decision
-        </h3>
+        <h3>Membership Decision</h3>
 
         <p>
           After reviewing everything, decide freely whether you
           wish to continue.
         </p>
-
       </div>
 
     </div>
-
-
-    <!-- APPLICATION -->
 
     <div class="application-wrapper">
 
@@ -1433,190 +1301,132 @@
 
       </div>
 
-
       <!-- APPLICATION FORM -->
 
       <form
-  id="joinForm"
-  class="application-form"
-  action="https://api.web3forms.com/submit"
-  method="POST"
->
-  <input type="hidden" name="access_key" value="f10410b1-e1a4-431d-a7dc-95f1fca5fa87">
-  <input
-    type="hidden"
-    name="subject"
-    value="New Global Unity & Enlightenment Application"
-  >
-  <input
-    type="hidden"
-    name="from_name"
-    value="Global Unity & Enlightenment"
-  >
+        id="joinForm"
+        class="application-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
 
-        <!-- FIRST / MIDDLE NAME -->
+        <!-- PASTE YOUR NEW WEB3FORMS ACCESS KEY ONLY HERE -->
+        <input
+          type="hidden"
+          name="access_key"
+          value="f10410b1-e1a4-431d-a7dc-95f1fca5fa87"
+        >
+
+        <input
+          type="hidden"
+          name="subject"
+          value="New Global Unity & Enlightenment Application"
+        >
+
+        <input
+          type="hidden"
+          name="from_name"
+          value="Global Unity & Enlightenment"
+        >
 
         <div class="form-row">
 
           <div class="form-group">
-
-            <label for="firstName">
-              First Name
-            </label>
+            <label for="firstName">First Name</label>
 
             <input
               type="text"
               id="firstName"
-              name="firstName"
+              name="First Name"
               placeholder="Enter your first name"
               required
             >
-
           </div>
 
-
           <div class="form-group">
-
-            <label for="middleName">
-              Middle Name
-            </label>
+            <label for="middleName">Middle Name</label>
 
             <input
               type="text"
               id="middleName"
-              name="middleName"
+              name="Middle Name"
               placeholder="Enter your middle name"
             >
-
           </div>
 
         </div>
-
-
-        <!-- LAST NAME / MARITAL STATUS -->
 
         <div class="form-row">
 
           <div class="form-group">
-
-            <label for="lastName">
-              Last Name
-            </label>
+            <label for="lastName">Last Name</label>
 
             <input
               type="text"
               id="lastName"
-              name="lastName"
+              name="Last Name"
               placeholder="Enter your last name"
               required
             >
-
           </div>
 
-
           <div class="form-group">
-
-            <label for="maritalStatus">
-              Marital Status
-            </label>
+            <label for="maritalStatus">Marital Status</label>
 
             <select
               id="maritalStatus"
-              name="maritalStatus"
+              name="Marital Status"
               required
             >
-
-              <option value="">
-                Select marital status
-              </option>
-
-              <option value="single">
-                Single
-              </option>
-
-              <option value="married">
-                Married
-              </option>
-
-              <option value="divorced">
-                Divorced
-              </option>
-
-              <option value="widowed">
-                Widowed
-              </option>
-
-              <option value="prefer-not-to-say">
+              <option value="">Select marital status</option>
+              <option value="Single">Single</option>
+              <option value="Married">Married</option>
+              <option value="Divorced">Divorced</option>
+              <option value="Widowed">Widowed</option>
+              <option value="Prefer not to say">
                 Prefer not to say
               </option>
-
             </select>
-
           </div>
 
         </div>
 
+        <div class="form-row">
 
-         <!-- DATE OF BIRTH / GENDER -->
+          <div class="form-group">
+            <label for="dateOfBirth">
+              Date of Birth
+            </label>
 
-<div class="form-row">
+            <input
+              type="date"
+              id="dateOfBirth"
+              name="Date of Birth"
+              required
+            >
+          </div>
 
-  <div class="form-group">
+          <div class="form-group">
+            <label for="gender">
+              Gender
+            </label>
 
-    <label for="dateOfBirth">
-      Date of Birth
-    </label>
+            <select
+              id="gender"
+              name="Gender"
+              required
+            >
+              <option value="">Select gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+              <option value="Prefer not to say">
+                Prefer not to say
+              </option>
+            </select>
+          </div>
 
-    <input
-      type="date"
-      id="dateOfBirth"
-      name="dateOfBirth"
-      required
-    >
-
-  </div>
-
-
-  <div class="form-group">
-
-    <label for="gender">
-      Gender
-    </label>
-
-    <select
-      id="gender"
-      name="gender"
-      required
-    >
-
-      <option value="">
-        Select gender
-      </option>
-
-      <option value="male">
-        Male
-      </option>
-
-      <option value="female">
-        Female
-      </option>
-
-      <option value="other">
-        Other
-      </option>
-
-      <option value="prefer-not-to-say">
-        Prefer not to say
-      </option>
-
-    </select>
-
-  </div>
-
-</div>
-
-
-        <!-- OCCUPATION -->
+        </div>
 
         <div class="form-group">
 
@@ -1627,15 +1437,12 @@
           <input
             type="text"
             id="occupation"
-            name="occupation"
+            name="Occupation"
             placeholder="Enter your occupation"
             required
           >
 
         </div>
-
-
-        <!-- EMAIL / PHONE -->
 
         <div class="form-row">
 
@@ -1648,13 +1455,12 @@
             <input
               type="email"
               id="email"
-              name="email"
+              name="Email"
               placeholder="Enter your email address"
               required
             >
 
           </div>
-
 
           <div class="form-group">
 
@@ -1665,7 +1471,7 @@
             <input
               type="tel"
               id="phone"
-              name="phone"
+              name="Phone"
               placeholder="Enter your phone number"
               required
             >
@@ -1673,9 +1479,6 @@
           </div>
 
         </div>
-
-
-        <!-- COUNTRY / STATE -->
 
         <div class="form-row">
 
@@ -1688,13 +1491,12 @@
             <input
               type="text"
               id="country"
-              name="country"
+              name="Country"
               placeholder="Enter your country"
               required
             >
 
           </div>
-
 
           <div class="form-group">
 
@@ -1705,7 +1507,7 @@
             <input
               type="text"
               id="state"
-              name="state"
+              name="State"
               placeholder="Enter your state"
               required
             >
@@ -1713,9 +1515,6 @@
           </div>
 
         </div>
-
-
-        <!-- CITY / HOUSE ADDRESS -->
 
         <div class="form-row">
 
@@ -1728,13 +1527,12 @@
             <input
               type="text"
               id="city"
-              name="city"
+              name="City"
               placeholder="Enter your city"
               required
             >
 
           </div>
-
 
           <div class="form-group">
 
@@ -1745,7 +1543,7 @@
             <input
               type="text"
               id="houseAddress"
-              name="houseAddress"
+              name="House Address"
               placeholder="Enter your house address"
               required
             >
@@ -1754,15 +1552,13 @@
 
         </div>
 
-
-        <!-- AGREEMENT -->
-
         <label class="checkbox-row">
 
           <input
             type="checkbox"
             id="agreement"
-            name="agreement"
+            name="Agreement"
+            value="Agreed"
             required
           >
 
@@ -1773,9 +1569,6 @@
 
         </label>
 
-
-        <!-- SUBMIT -->
-
         <button
           type="submit"
           class="gold-btn"
@@ -1783,9 +1576,6 @@
           Submit Application
           <span>→</span>
         </button>
-
-
-        <!-- MESSAGE -->
 
         <div
           id="applicationMessage"
@@ -1799,11 +1589,6 @@
   </div>
 
 </section>
-
-
-<!-- =========================
-     RULES
-========================= -->
 
 <section id="rules">
 
@@ -1922,11 +1707,6 @@
 
 </section>
 
-
-<!-- =========================
-     FAQ
-========================= -->
-
 <section id="faq" class="dark">
 
   <div class="container">
@@ -1947,7 +1727,6 @@
     <div class="faq">
 
       <details>
-
         <summary>
           What is the Illuminati?
         </summary>
@@ -1958,12 +1737,9 @@
           about a continuing global organization are separate
           narratives and should be evaluated critically.
         </p>
-
       </details>
 
-
       <details>
-
         <summary>
           Is joining voluntary?
         </summary>
@@ -1972,12 +1748,9 @@
           Yes. Participation should always be voluntary and based
           on an informed personal decision.
         </p>
-
       </details>
 
-
       <details>
-
         <summary>
           Are blood sacrifices required?
         </summary>
@@ -1986,12 +1759,9 @@
           No. The material presented on this website states that
           joining does not involve blood sacrifice or harmful acts.
         </p>
-
       </details>
 
-
       <details>
-
         <summary>
           Can I ask questions before joining?
         </summary>
@@ -2000,12 +1770,9 @@
           Yes. Prospective participants should understand the
           organization's expectations before making any decision.
         </p>
-
       </details>
 
-
       <details>
-
         <summary>
           Can I change my mind?
         </summary>
@@ -2014,7 +1781,6 @@
           Participation should remain voluntary. Anyone should be
           able to make their own decision about whether to continue.
         </p>
-
       </details>
 
     </div>
@@ -2022,11 +1788,6 @@
   </div>
 
 </section>
-
-
-<!-- =========================
-     FINAL CTA
-========================= -->
 
 <section class="cta" id="contact">
 
@@ -2059,11 +1820,6 @@
 
 </section>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
 
   <p>
@@ -2073,29 +1829,17 @@
   <p style="margin-top:10px;">
 
     <a href="#home">Home</a>
-
     <a href="#about">About</a>
-
     <a href="#history">History</a>
-
     <a href="#aims">Aims</a>
-
     <a href="#enlightenment">Enlightenment</a>
-
     <a href="#join">Join</a>
-
     <a href="#rules">Rules</a>
-
     <a href="#faq">FAQ</a>
 
   </p>
 
 </footer>
-
-
-<!-- =========================
-     APPLICATION SCRIPT
-========================= -->
 
 <script>
   const joinForm = document.getElementById("joinForm");
@@ -2103,25 +1847,37 @@
   joinForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const button = joinForm.querySelector("button[type='submit']");
-    const message = document.getElementById("applicationMessage");
+    const button = joinForm.querySelector(
+      "button[type='submit']"
+    );
+
+    const message = document.getElementById(
+      "applicationMessage"
+    );
 
     button.disabled = true;
     button.innerHTML = "Submitting...";
 
+    message.style.display = "none";
+
     try {
-      const response = await fetch(joinForm.action, {
-        method: "POST",
-        body: new FormData(joinForm),
-        headers: {
-          Accept: "application/json"
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: new FormData(joinForm),
+          headers: {
+            Accept: "application/json"
+          }
         }
-      });
+      );
 
       const result = await response.json();
 
       if (response.ok && result.success) {
+
         message.style.display = "block";
+
         message.innerHTML =
           "Application submitted successfully. Thank you for expressing your interest.";
 
@@ -2134,19 +1890,29 @@
             150,
           behavior: "smooth"
         });
+
       } else {
+
         message.style.display = "block";
+
         message.innerHTML =
           "There was a problem submitting your application. Please try again.";
+
       }
+
     } catch (error) {
+
       message.style.display = "block";
+
       message.innerHTML =
         "There was a problem submitting your application. Please try again.";
+
     }
 
     button.disabled = false;
-    button.innerHTML = "Submit Application <span>→</span>";
+
+    button.innerHTML =
+      "Submit Application <span>→</span>";
   });
 </script>
 
